@@ -1,0 +1,33 @@
+.CarouselTitle {
+    background: rgba(7,185,241,0.66);
+    padding: 1rem 1rem;
+    color: white;
+    text-align: end;
+}
+
+.CarouselSubtitle{
+    background: rgba(1, 88, 115, 0.66);
+    padding: 10px 20px;
+    color: white;
+    text-align: end;
+}
+
+.CarouselSubtitle > a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.CarouselText {
+    position: absolute;
+    top: 10rem;
+}
+
+.CarouselDownbar {
+    background: rgb(7,185,241);
+    background: linear-gradient(90deg, rgba(7,185,241,0.75) 60%, rgba(0,124,163,1) 60%);
+    height: 30px; 
+    position: absolute; 
+    bottom: 0px;
+}
+

@@ -1,0 +1,12 @@
+.bg-parallax {
+    background-attachment: fixed;
+    background-image: url('../../img/bg-parallax.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.callToAction {
+    color: white;
+    font-weight: bold;
+}

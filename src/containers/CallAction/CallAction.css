@@ -1,0 +1,19 @@
+.bg-gradientcta {
+    background: rgb(0,124,163);
+    background: linear-gradient(90deg, rgba(0,124,163,1) 41%, rgba(7,185,241,1) 76%);
+}
+
+.btn-ortega {
+    color: white;
+    background-color: #007ca3;
+    border-color:#007ca3;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.btn-ortega:hover, .btn-lopez:focus, .btn-lopez:active{
+    color: white !important;
+    background-color: #007ca3 !important;
+    border-color: #007ca3 !important;
+}
