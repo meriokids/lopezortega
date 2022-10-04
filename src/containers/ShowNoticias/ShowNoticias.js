@@ -19,7 +19,7 @@ const ShowNoticias = (props, p) => (
                                     props.description.substring(0, 100)
                                 )}...`}
                             </Card.Text>
-                            <Button variant="primary" href={props.profileurl}>Go somewhere</Button>
+                            <Button variant="primary" href={props.title}>Ver más</Button>
                         </Card.Body>
                     </Card>
                 </Col>

@@ -8,6 +8,8 @@ import Service from './containers/Service/Service';
 import CallAction from './containers/CallAction/CallAction';
 import Contact from './containers/Contact/Contact';
 import Footer from './containers/Footer/Footer';
+import Blog from './components/Blog/blog';
+
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
        <CallAction />
        <Contact />
        <Footer />
+       <Blog></Blog>
     </div>
   );
 }
