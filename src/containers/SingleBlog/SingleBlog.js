@@ -8,7 +8,7 @@ export class SingleBlog extends Component {
     super(props);
     this.state = {
       singlePost: {},
-      titleid: props.location.pathname,
+      titleid: this.props.history.location.pathname, 
       avatar: "",
       profileLink: "",
       error:null,
@@ -51,7 +51,7 @@ export class SingleBlog extends Component {
   render() {
     let post
     if(this.state.singlePost){
-     post =( <>
+     post =( <div>
        <h2>{this.state.singlePost.title}</h2>
         <div>
           <a
@@ -67,14 +67,14 @@ export class SingleBlog extends Component {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <p>{this.state.singlePost.author}</p>
+            <span>{this.state.singlePost.author}</span>
           </a>
-          <p>{this.state.singlePost.pubDate}</p>
+          <span>{this.state.singlePost.pubDate}</span>
         </div>
   
       <div  dangerouslySetInnerHTML={{ __html:this.state.singlePost.content}}>
           </div>
-      </>
+      </div>
      )
     }
    
@@ -84,7 +84,7 @@ export class SingleBlog extends Component {
       post = (
         <>
           <h2 className="red center1">{error}</h2>
-          <p className="errorMessage center1">{errorMsg}</p>
+          <span className="errorMessage center1">{errorMsg}</span>
         </>
       );
     }

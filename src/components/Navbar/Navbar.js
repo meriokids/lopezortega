@@ -29,10 +29,10 @@ const NavbarLight = (props) => (
         <Nav className="me-auto">
         {/* <FontAwesomeIcon icon={['fa', 'home']}  /> */}
           <Nav.Link href="/">Inicio</Nav.Link>
-          <Nav.Link href="#AboutUs">Quienes Somos</Nav.Link>
-          <Nav.Link href="#Service">Servicios</Nav.Link>
+          <Nav.Link href="/#AboutUs">Quienes Somos</Nav.Link>
+          <Nav.Link href="/#Service">Servicios</Nav.Link>
           <Nav.Link href="/noticias" onClick={props.clicked} >Noticias</Nav.Link>
-          <Nav.Link href="#contact">Contacto</Nav.Link>
+          <Nav.Link href="/#contact">Contacto</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     

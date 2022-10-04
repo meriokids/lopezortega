@@ -75,12 +75,12 @@ render() {
     post = (
       <>
         <h2 className="red center1">{error}</h2>
-        <p className="errorMessage center1">{errorMsg}</p>
+        <span className="errorMessage center1">{errorMsg}</span>
       </>
     );
   }
   return (
-    <div className="container">
+    <div className="container" style={{position:"relative" , top:"120px" }}>
       <div className="row">
         {/* {this.state.item.map((post, index) => (
         <ShowBlog key={index} {...post} {...this.state.profile} {...index} />
