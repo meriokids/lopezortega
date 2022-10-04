@@ -1,34 +1,33 @@
 import React from "react";
-import { Col, Row, Container, Card, Button } from "react-bootstrap";
-import NavbarLight from './components/Navbar/Navbar';
-import Footer from "../Footer/Footer";
+import { Col, Card, Button } from "react-bootstrap";
 
-const Noticias = () => (
-    <div>
-        <NavbarLight></NavbarLight>
+import ToText from "../../utils/toText";
 
-        <Container>
-            <Row>
+
+const ShowNoticias = (props, p) => (
+
+
+     
                 
                 <Col lg='4'>
-                    <Card>
-                        <Card.Img variant="top" src="holder.js/100px180" />
+                    <Card >
+                        <Card.Img variant="top" src={props.thumbnail} />
                         <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
+                            <Card.Title>{props.title}</Card.Title>
                             <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                                {`${ToText(
+                                    props.description.substring(0, 100)
+                                )}...`}
                             </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
+                            <Button variant="primary" href={props.profileurl}>Go somewhere</Button>
                         </Card.Body>
                     </Card>
                 </Col>
 
-            </Row>
-        </Container>
+      
 
-        <Footer></Footer>
-    </div>
+        
+ 
 )
 
-export default Noticias;
+export default ShowNoticias;
