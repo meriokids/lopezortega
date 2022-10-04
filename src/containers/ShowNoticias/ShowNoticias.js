@@ -9,7 +9,7 @@ const ShowNoticias = (props, p) => (
 
      
                 
-                <Col lg='4'>
+                <Col lg='3'>
                     <Card >
                         <Card.Img variant="top" src={props.thumbnail} />
                         <Card.Body>

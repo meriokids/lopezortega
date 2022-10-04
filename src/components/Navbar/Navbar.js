@@ -10,7 +10,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 
 library.add(fab, fas);
 
-const NavbarLight = () => (
+const NavbarLight = (props) => (
   <Navbar collapseOnSelect bg="light" expand="lg" variant="light" className='opacity-100' fixed="top">
     <Container>
       <Navbar.Brand href="#home"><img src={Logo} width='150px' height='auto' alt='logotype'/></Navbar.Brand>
@@ -28,10 +28,10 @@ const NavbarLight = () => (
        
         <Nav className="me-auto">
         {/* <FontAwesomeIcon icon={['fa', 'home']}  /> */}
-          <Nav.Link href="#home">Inicio</Nav.Link>
+          <Nav.Link href="/">Inicio</Nav.Link>
           <Nav.Link href="#AboutUs">Quienes Somos</Nav.Link>
           <Nav.Link href="#Service">Servicios</Nav.Link>
-          <Nav.Link href="#news">Noticias</Nav.Link>
+          <Nav.Link href="/noticias" onClick={props.clicked} >Noticias</Nav.Link>
           <Nav.Link href="#contact">Contacto</Nav.Link>
         </Nav>
       </Navbar.Collapse>

@@ -1,29 +1,27 @@
+
+import React from "react";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarLight from './components/Navbar/Navbar';
-import CarouselHead from './components/CarouselHead/CarouselHead';
-import AboutUs from './containers/About/About';
-import ParallaxCTA from './containers/ParallaxCTA/ParallaxCTA';
-import Service from './containers/Service/Service';
-import CallAction from './containers/CallAction/CallAction';
-import Contact from './containers/Contact/Contact';
-import Footer from './containers/Footer/Footer';
 import Blog from './components/Blog/blog';
-
+import SingleBlog from './containers/SingleBlog/SingleBlog';
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import Home from './Home';
 
 
 function App() {
   return (
     <div className="App">
-       <NavbarLight />
-       <CarouselHead />
-       <AboutUs />
-       <ParallaxCTA />
-       <Service />
-       <CallAction />
-       <Contact />
-       <Footer />
-       <Blog></Blog>
+      
+      <BrowserRouter>
+      <NavbarLight />
+     
+        <Routes>
+        <Route exact path="/" element={<Home />}></Route>
+          <Route exact path="/noticias" element={<Blog />}></Route>
+          <Route exact path="/:id" element={<SingleBlog />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
