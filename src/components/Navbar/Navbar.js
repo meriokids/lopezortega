@@ -14,7 +14,7 @@ library.add(fab, fas);
 const NavbarLight = (props) => (
   <Navbar collapseOnSelect bg="light" expand="lg" variant="light" className='opacity-100' fixed="top">
     <Container>
-      <Navbar.Brand href="#home"><img src={Logo} width='150px' height='auto' alt='logotype'/></Navbar.Brand>
+      <Navbar.Brand href="/"><img src={Logo} width='150px' height='auto' alt='logotype'/></Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
       <div className='d-flex ms-2 me-5'>
@@ -32,7 +32,7 @@ const NavbarLight = (props) => (
           <Nav.Link href="/">Inicio</Nav.Link>
           <Nav.Link href="/#AboutUs">Quienes Somos</Nav.Link>
           <Nav.Link href="/#Service">Servicios</Nav.Link>
-          <Link className="nav-link text-decoration-none" to="/noticias" onClick={props.clicked}>Noticias</Link>
+          <Link className="nav-link text-decoration-none" to="/noticias" onClick={props.clicked} replace>Noticias</Link>
           <Nav.Link href="/#contact">Contacto</Nav.Link>
         </Nav>
       </Navbar.Collapse>

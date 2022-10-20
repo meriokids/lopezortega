@@ -2,25 +2,25 @@
 import React from "react";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavbarLight from './components/Navbar/Navbar';
 import Blog from './components/Blog/Blog';
-import { BrowserRouter, Switch, Route, Redirect, HashRouter } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import SingleBlog from './containers/SingleBlog/SingleBlog';
 import Home from './Home';
+import Layout from "./containers/Layout/Layout";
 
 
 
 function App() {
   return (
     <div className="App">
-      <HashRouter >
-      <NavbarLight />
+      <Router >
+      <Layout />
       <Switch>
-          <Route path="/" exact component={Home}></Route>
-          <Route path="/noticias" exact component={Blog}></Route>
-          <Route path="/:id" exact component={SingleBlog} ></Route>
+          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/noticias" component={Blog}></Route>
+          <Route exact path="/:id" component={SingleBlog} ></Route>
         </Switch>
-        </HashRouter >
+        </Router >
     </div>
   );
 }
