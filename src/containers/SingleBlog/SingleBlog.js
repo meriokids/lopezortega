@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Axios from "axios";
+import c from "./SingleBlog.module.css";
+import Spinner from "../../components/Spinner/Spinner";
 
 
 export class SingleBlog extends Component {
@@ -8,7 +10,7 @@ export class SingleBlog extends Component {
     super(props);
     this.state = {
       singlePost: {},
-      titleid: this.props.history.location.pathname, 
+      titleid: props.location.pathname,
       avatar: "",
       profileLink: "",
       error:null,
@@ -51,9 +53,9 @@ export class SingleBlog extends Component {
   render() {
     let post
     if(this.state.singlePost){
-     post =( <div>
+     post =( <>
        <h2>{this.state.singlePost.title}</h2>
-        <div>
+        <div className={c.avatar}>
           <a
             href={this.state.profileLink}
             rel="noopener noreferrer"
@@ -67,30 +69,32 @@ export class SingleBlog extends Component {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <span>{this.state.singlePost.author}</span>
+            <p>{this.state.singlePost.author}</p>
           </a>
-          <span>{this.state.singlePost.pubDate}</span>
+          <p>{this.state.singlePost.pubDate}</p>
         </div>
   
-      <div  dangerouslySetInnerHTML={{ __html:this.state.singlePost.content}}>
+      <div className={c.content}  dangerouslySetInnerHTML={{ __html:this.state.singlePost.content}}>
           </div>
-      </div>
+      </>
      )
     }
-   
+    if(this.state.isloading){
+      post = <Spinner/>
+    }
     if(this.state.error){
    let   error = this.state.error.code ? this.state.error.code : this.state.error.name;
       let errorMsg = this.state.error.message;
       post = (
         <>
           <h2 className="red center1">{error}</h2>
-          <span className="errorMessage center1">{errorMsg}</span>
+          <p className="errorMessage center1">{errorMsg}</p>
         </>
       );
     }
     
     return (
-      <div>
+      <div className={`container ${c.center}`}>
        {post}
       </div>
     );

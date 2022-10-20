@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 library.add(fab, fas);
 
@@ -31,7 +32,7 @@ const NavbarLight = (props) => (
           <Nav.Link href="/">Inicio</Nav.Link>
           <Nav.Link href="/#AboutUs">Quienes Somos</Nav.Link>
           <Nav.Link href="/#Service">Servicios</Nav.Link>
-          <Nav.Link href="/noticias" onClick={props.clicked} >Noticias</Nav.Link>
+          <Link className="nav-link text-decoration-none" to="/noticias" onClick={props.clicked}>Noticias</Link>
           <Nav.Link href="/#contact">Contacto</Nav.Link>
         </Nav>
       </Navbar.Collapse>
