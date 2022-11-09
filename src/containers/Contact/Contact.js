@@ -3,7 +3,7 @@ import {Container, Row, Col, Form, Button} from "react-bootstrap";
 import './Contact.css';
 
 const Contact = () => (
-    <div id="contact" className="bg-map">
+    <div id="Contact" className="bg-map">
         <Container>
             <Row className="py-5">
                 <Col lg="3" className='d-flex align-items-center'>
