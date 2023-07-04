@@ -18,7 +18,8 @@ export class SingleBlog extends Component {
     };
   }
   mediumURL =
-    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@mehulkothari05";
+    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@alopezcontador";
+    //"https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@meriokids";
   componentDidMount() {
     Axios.get(this.mediumURL)
 

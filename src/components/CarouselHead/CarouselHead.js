@@ -18,7 +18,7 @@ const CarouselHead = () => (
         <Container>
           <div className='position-absolute top-50'>
             <div className='CarouselTitle'>
-              <h1 className='fw-bold'>Bienvenido a Lopez & Ortega</h1>
+              <h1 className='fw-bold'>Bienvenido a Lopez & Ortega.</h1>
                   Estamos trabajando para que tengas una mejor experiencia al visitar nuestro sitio
             </div>
             <div className='CarouselSubtitle my-3 '>
